@@ -3,14 +3,10 @@ project(LRAD)
 
 set(CMAKE_CXX_STANDARD 17)
 
-ADD_LIBRARY(INeedCString
-	Source/script.cpp
-)
-target_link_libraries(INeedCString -lcstring)
-
 include_directories(Source)
+add_compile_options(-lcstring -lstring -lcfloat -lfstream -lm -lvector -lalgorithm -lchrono -lstdint -lfstream -liostream)
 
-add_executable(GPU_VRAD
+add_executable(LRAD
         Source/basetypes.h
         Source/bsp.cpp
         Source/bsp.h
